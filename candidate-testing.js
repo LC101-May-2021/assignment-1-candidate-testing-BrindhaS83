@@ -43,10 +43,10 @@ function gradeQuiz(candidateAnswers) {
   let grade;
   
 if (candidateAnswer === correctAnswer){
-   grade = 100;
+   grade = 20;
    console.log(grade);
 } else{
-  grade = 40;
+  grade = 0;
   console.log(grade);
 }
   return grade;
