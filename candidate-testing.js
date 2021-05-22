@@ -12,7 +12,7 @@ let candidateAnswer;
 let questions;
 let correctAnswers;
 let candidateAnswers;
-question = "Who was the first American woman in space?. ";
+question = "Who was the first American woman in space?.";
 correctAnswer = "Sally Ride";
 candidateAnswer="";
 
@@ -40,15 +40,15 @@ function gradeQuiz(candidateAnswers) {
   console.log("Incorrect Answer..Try Again!");
 } checking */
 
-  let grade;
+ 
   
 if (candidateAnswer === correctAnswer){
-   grade = 20;
-   console.log(grade);
+   console.log("correctAnswer");
 } else{
-  grade = 0;
-  console.log(grade);
+
+  console.log("Incorrect");
 }
+  let grade;
   return grade;
 }
 
