@@ -14,12 +14,12 @@ let correctAnswers;
 let candidateAnswers;
 question = "Who was the first American woman in space? ";
 correctAnswer = "Sally Ride";
-candidateAnswer="";
+//candidateAnswer="";
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
 candidateName = input.question("Please enter the candidate name");
-console.log(candidateName);
+//console.log(candidateName);
 
 }
 
@@ -34,16 +34,16 @@ function gradeQuiz(candidateAnswers) {
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 
 if (candidateAnswer === correctAnswer){
-  console. log("Correact Answer!");
+  console. log("Correct Answer!");
 
 } else{
   console.log("Incorrect Answer..Try Again!");
 } 
 
-  let grade;
+  //let grade;
   
 
-  return grade;
+  //return grade;
 }
 
 function runProgram() {
