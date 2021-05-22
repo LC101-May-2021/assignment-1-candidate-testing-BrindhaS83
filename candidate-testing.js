@@ -12,7 +12,7 @@ let candidateAnswer;
 let questions;
 let correctAnswers;
 let candidateAnswers;
-question = "Who was the first American woman in space? ";
+question = "Who was the first American woman in space?. ";
 correctAnswer = "Sally Ride";
 candidateAnswer="";
 
