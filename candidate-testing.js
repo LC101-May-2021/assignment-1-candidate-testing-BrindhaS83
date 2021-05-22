@@ -14,7 +14,7 @@ let correctAnswers;
 let candidateAnswers;
 question = "Who was the first American woman in space? ";
 correctAnswer = "Sally Ride";
-//candidateAnswer="";
+candidateAnswer="";
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
