@@ -25,7 +25,7 @@ candidateName = input.question("Please enter the candidate name");
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-candidateAnswer = input.question(question) +".";
+candidateAnswer = input.question(question);
 
 }
 
@@ -43,10 +43,10 @@ function gradeQuiz(candidateAnswers) {
   let grade;
   
 if (candidateAnswer === correctAnswer){
-   grade ="Passed";
+   grade = 100;
    console.log(grade);
 } else{
-  grade ="Failed";
+  grade = 40;
   console.log(grade);
 }
   return grade;
