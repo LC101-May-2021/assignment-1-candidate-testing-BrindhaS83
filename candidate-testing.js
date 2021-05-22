@@ -33,17 +33,23 @@ function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 
-if (candidateAnswer === correctAnswer){
+/*if (candidateAnswer === correctAnswer){
   console. log("Correct Answer!");
 
 } else{
   console.log("Incorrect Answer..Try Again!");
-} 
+} checking */
 
-  //let grade;
+  let grade;
   
-
-  //return grade;
+if (candidateAnswer === correctAnswer){
+   grade ="Passed";
+   console.log(grade);
+} else{
+  grade ="Failed";
+  console.log(grade);
+}
+  return grade;
 }
 
 function runProgram() {
