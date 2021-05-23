@@ -19,14 +19,14 @@ candidateAnswer="";
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
 candidateName = input.question("Please enter the candidate name: ");
-//console.log(candidateName);
+
 
 }
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 candidateAnswer = input.question(question);
-//console.log(candidateAnswer);
+
 
 
 }
@@ -36,7 +36,7 @@ function gradeQuiz(candidateAnswers) {
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
  
   
-if (candidateAnswer == correctAnswer){
+if (candidateAnswer === correctAnswer){
    console.log("correct Answer");
 } else{
 
@@ -49,7 +49,7 @@ if (candidateAnswer == correctAnswer){
 function runProgram() {
   askForName();
   // TODO 1.1c: Ask for candidate's name //
-  console.log("Welcome to Single Question Quiz " + candidateName);
+  console.log(candidateName  + " Welcome to Single Question Quiz ");
   askQuestion();
   gradeQuiz(this.candidateAnswers);
 } 
