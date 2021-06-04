@@ -53,17 +53,18 @@ function gradeQuiz(candidateAnswers) {
    //console.log(numberOfCorrAns);
    //console.log(questions.length);
     
-   if (percScored >=80){
-     grade ="Passed";
-   }else {
-     grade ="Failed";
-   }
-  //return grade;
-  console.log(">>> Overall Grade: " + percScored +"% (" + numberOfCorrAns + " of " +  questions.length + " responses correct)" + "<<<");
-  console.log(">>> Status: " + grade + " <<<");
+        if (percScored >=80){
+            grade ="Passed";
+       }else {
+            grade ="Failed";
+      }
+        console.log(">>> Overall Grade: " + percScored +"% (" + numberOfCorrAns + " of " +  questions.length + " responses correct)" + "<<<");
+        console.log(">>> Status: " + grade + " <<<");
+        return grade;
 }
 
-
+  
+    
 /*if (candidateAnswer === correctAnswer){
    console.log("correct Answer");
 } else{
