@@ -78,7 +78,7 @@ function gradeQuiz(candidateAnswers) {
         //console.log(candidateAnswers);
         console.log(">>> Overall Grade: " + percScored +"% (" + numberOfCorrAns + " of " +  questions.length + " responses correct)" + "<<<");
         console.log(">>> Status: " + grade + " <<<");
-        return percScored;
+        return ansScore;
 }
 
   
