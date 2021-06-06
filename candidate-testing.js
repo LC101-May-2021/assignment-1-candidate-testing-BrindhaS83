@@ -53,7 +53,7 @@ function gradeQuiz(candidateAnswers) {
   for (i=0; i < candidateAnswers.length;i++){
    
     if(correctAnswers[i].toUpperCase() === candidateAnswers[i].toUpperCase()){
-        ansScore++ ;
+        ansScore = ansScore + 20 ;
         
         //console.log(ansScore);
     } 
@@ -61,7 +61,7 @@ function gradeQuiz(candidateAnswers) {
    // console.log(ansScore);
      //console.log(candidateAnswers);
   }
-          percScored = (ansScore/questions.length)*100;
+          percScored = (ansScore/(questions.length * 20))*100;
    //console.log(numberOfCorrAns);
    //console.log(questions.length);
     
@@ -74,7 +74,7 @@ function gradeQuiz(candidateAnswers) {
   
        //console.log(ansScore);
         //console.log(candidateAnswers);
-        console.log(">>> Overall Grade: " + percScored +"% (" + ansScore + " of " +  questions.length + " responses correct)" + "<<<");
+        console.log(">>> Overall Grade: " + percScored +"% (" + ansScore/20 + " of " +  questions.length + " responses correct)" + "<<<");
         console.log(">>> Status: " + grade + " <<<");
         return ansScore;
 }
