@@ -39,9 +39,9 @@ function askQuestion() {
   //console.log("Correct Answer: "+correctAnswers[i]);
     console.log(yourAns);
     console.log(corrAns);
-      if(correctAnswers[i].toUpperCase() === candidateAnswers[i].toUpperCase()){
-        numberOfCorrAns++;
-  }
+      //if(correctAnswers[i].toUpperCase() === candidateAnswers[i].toUpperCase()){
+      //  numberOfCorrAns++;
+  //}
  }
 }
 
@@ -53,17 +53,15 @@ function gradeQuiz(candidateAnswers) {
   for (i=0; i < candidateAnswers.length;i++){
    
     if(correctAnswers[i].toUpperCase() === candidateAnswers[i].toUpperCase()){
-        ansScore = ansScore + 20;
+        ansScore++ ;
         
         //console.log(ansScore);
-    } else{
-        ansScore = ansScore + 0;
-    }
+    } 
     
    // console.log(ansScore);
      //console.log(candidateAnswers);
   }
-          percScored = (numberOfCorrAns/questions.length)*100;
+          percScored = (ansScore/questions.length)*100;
    //console.log(numberOfCorrAns);
    //console.log(questions.length);
     
@@ -72,11 +70,11 @@ function gradeQuiz(candidateAnswers) {
             }else {
                  grade ="Failed";
       }
-    
+
   
        //console.log(ansScore);
         //console.log(candidateAnswers);
-        console.log(">>> Overall Grade: " + percScored +"% (" + numberOfCorrAns + " of " +  questions.length + " responses correct)" + "<<<");
+        console.log(">>> Overall Grade: " + percScored +"% (" + ansScore + " of " +  questions.length + " responses correct)" + "<<<");
         console.log(">>> Status: " + grade + " <<<");
         return ansScore;
 }
