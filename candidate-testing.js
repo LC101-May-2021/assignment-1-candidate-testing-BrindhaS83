@@ -56,7 +56,9 @@ function gradeQuiz(candidateAnswers) {
         ansScore = ansScore + 20 ;
         
         //console.log(ansScore);
-    } 
+    } else{
+        ansScore = ansScore + 0;
+    }
     
    // console.log(ansScore);
      //console.log(candidateAnswers);
