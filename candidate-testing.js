@@ -8,7 +8,7 @@ let candidateName = "";
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer 
 let question = 'Who was the first American woman in space? ';
 let correctAnswer ='Sally Ride';
-let candidateAnswer="" ;
+let candidateAnswer ="" ;
 let questions;
 let correctAnswers;
 let candidateAnswers='';
@@ -17,7 +17,7 @@ let percScored =0.0;
 let grade;
 //question = "Who was the first American woman in space? ";
 //correctAnswer = "Sally Ride";
-questions = ['Who was the first American woman in space? ', 'True or false: 5 kilometer == 5000 meters? ','(5 + 3)/2 * 10 = ? ',' Given the array[8,Orbit,Trajectory,45],what entry is at index 2? ', 'What is the minimum crew size for the ISS? '];
+questions = ['Who was the first American woman in space? ', 'True or false: 5 kilometer == 5000 meters? ', '(5 + 3)/2 * 10 = ? ', 'Given the array[8,"Orbit", "Trajectory", 45],what entry is at index 2? ', 'What is the minimum crew size for the ISS? '];
 correctAnswers = ['Sally Ride','true','40','Trajectory','3'];
 //candidateAnswers="";
 candidateAnswers = [""];         
@@ -48,19 +48,37 @@ function askQuestion() {
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-  
-   percScored = (numberOfCorrAns/questions.length)*100;
+  let ansScore = 0;
+  //console.log(candidateAnswers.length);
+  for (i=0; i < candidateAnswers.length;i++){
+   
+    if(correctAnswers[i].toUpperCase() === candidateAnswers[i].toUpperCase()){
+        ansScore = ansScore + 20;
+        
+        //console.log(ansScore);
+    } else{
+        ansScore = ansScore + 0;
+    }
+    
+   // console.log(ansScore);
+     //console.log(candidateAnswers);
+  }
+          percScored = (numberOfCorrAns/questions.length)*100;
    //console.log(numberOfCorrAns);
    //console.log(questions.length);
     
-        if (percScored >= 80){
-            grade ="Passed";
-       }else {
-            grade ="Failed";
+            if (percScored >= 80){
+                  grade ="Passed";
+            }else {
+                 grade ="Failed";
       }
+    
+  
+       //console.log(ansScore);
+        //console.log(candidateAnswers);
         console.log(">>> Overall Grade: " + percScored +"% (" + numberOfCorrAns + " of " +  questions.length + " responses correct)" + "<<<");
         console.log(">>> Status: " + grade + " <<<");
-        return percScored;
+        return ansScore;
 }
 
   
