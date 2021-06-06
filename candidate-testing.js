@@ -12,7 +12,7 @@ let candidateAnswer ="" ;
 let questions;
 let correctAnswers;
 let candidateAnswers='';
-let numberOfCorrAns =0;
+//let numberOfCorrAns =0;
 let percScored =0.0;
 let grade;
 //question = "Who was the first American woman in space? ";
@@ -32,17 +32,15 @@ function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 //candidateAnswer = input.question(question);
   for (i = 0; i < questions.length; i++) {
-    candidateAnswers[i] = input.question(`${i+1})` +  questions[i]);
-    let yourAns = `Your Answer:  ${candidateAnswers[i]}`;
-    let corrAns = `Correct Answer: ${correctAnswers[i]}`;
-  //console.log("Your Answer: "+candidateAnswers[i]);
-  //console.log("Correct Answer: "+correctAnswers[i]);
-    console.log(yourAns);
-    console.log(corrAns);
-      if(correctAnswers[i].toUpperCase() === candidateAnswers[i].toUpperCase()){
-       numberOfCorrAns++;
-      }
- }
+        candidateAnswers[i] = input.question(`${i+1})` +  questions[i]);
+        let yourAns = `Your Answer:  ${candidateAnswers[i]}`;
+        let corrAns = `Correct Answer: ${correctAnswers[i]}`;
+        console.log(yourAns);
+        console.log(corrAns);
+      //if(correctAnswers[i].toUpperCase() === candidateAnswers[i].toUpperCase()){
+     //  numberOfCorrAns++;
+     // }
+  }
 }
 
 function gradeQuiz(candidateAnswers) {
@@ -52,31 +50,24 @@ function gradeQuiz(candidateAnswers) {
   //console.log(candidateAnswers.length);
   for (i=0; i < candidateAnswers.length;i++){
    
-    if(correctAnswers[i].toUpperCase() === candidateAnswers[i].toUpperCase()){
-        ansScore = ansScore + 20 ;
-        
-        //console.log(ansScore);
-    } else{
-        ansScore = ansScore + 0;
-    }
+        if(correctAnswers[i].toUpperCase() === candidateAnswers[i].toUpperCase()){
+            ansScore = ansScore + 20 ;
+      
+       } else{
+            ansScore = ansScore + 0;
+            }
     
-   // console.log(ansScore);
-     //console.log(candidateAnswers);
   }
-          percScored = (numberOfCorrAns/questions.length)*100;
-   //console.log(numberOfCorrAns);
-   //console.log(questions.length);
+         // percScored = (numberOfCorrAns/questions.length)*100;
+         percScored = (ansScore/(questions.length * 20))*100;
     
             if (percScored >= 80){
                   grade ="Passed";
-            }else {
-                 grade ="Failed";
-      }
-
-  
-       //console.log(ansScore);
-        //console.log(candidateAnswers);
-        console.log(">>> Overall Grade: " + percScored +"% (" + numberOfCorrAns + " of " +  questions.length + " responses correct)" + "<<<");
+            } else {
+                    grade ="Failed";
+                   }
+    
+        console.log(">>> Overall Grade: " + percScored +"% (" + ansScore/20 + " of " +  questions.length + " responses correct)" + "<<<");
         console.log(">>> Status: " + grade + " <<<");
         return ansScore;
 }
